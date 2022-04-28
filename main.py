@@ -3,6 +3,8 @@ import discord
 from discord.ext import commands
 import os
 
+client_key = os.getenv("key")
+
 intents = discord.Intents.default()
 intents.members = True
 
@@ -25,4 +27,4 @@ for filename in os.listdir('./cogs'):
 
 Keep_Alive.keep_alive()
 
-client.run('NzcwMzY1ODg4MDkxMzg5OTY0.X5chJA.uQRXnpkSFKkTD6kwPAWjOY34ngU')
+client.run(client_key)
